@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 Project(MyProject VERSION 1.0.0)
 
-add_executable(cmake-good main.cpp hello.cpp)
+add_library(say-hello hello.h hello.cpp)
+
+add_executable(cmake-good main.cpp)
+
+target_link_libraries(cmake-good PRIVATE say-hello)
