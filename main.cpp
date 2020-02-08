@@ -1,8 +1,8 @@
-#include <iostream>
+#include "hello.h"
 
 int main()
 {
-    std::cout << "Hello World" << std::endl;
+    hello::say_hello();
 
     return 0;
 }
